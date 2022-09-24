@@ -15,6 +15,8 @@ services:
       POSTGRES_DB: sample
       POSTGRES_INITDB_ARGS: '--encoding=UTF-8'
       TZ: 'Asia/Tokyo'
+    volumes:
+      - "./sqls:/usr/src"
 
 volumes:
   db: {}
