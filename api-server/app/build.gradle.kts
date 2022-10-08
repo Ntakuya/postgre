@@ -19,6 +19,9 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     implementation("com.google.guava:guava:31.0.1-jre")
     implementation("org.postgresql:postgresql:42.2.14")
+    implementation("org.postgresql:postgresql:42.2.12")
+    implementation("org.jdbi:jdbi3-sqlobject:3.20.0")
+    implementation("org.jdbi:jdbi3-kotlin:3.20.0")
 
     testImplementation("org.jetbrains.kotlin:kotlin-test")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit")
@@ -34,4 +37,3 @@ flyway {
   user = "sample"
   password = "sample"
 }
-
