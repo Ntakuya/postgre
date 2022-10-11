@@ -10,7 +10,11 @@ data class Person(
         fun of(
             name: String
         ): Person {
-            return Person(id = ThreadLocalRandom.current().nextInt(1, 2147483647 + 1) , name)
+            return Person(generateUUID() , name)
+        }
+
+        private fun generateUUID(): Int {
+            return ThreadLocalRandom.current().nextInt(1, 2147483647 + 1)
         }
     }
 }

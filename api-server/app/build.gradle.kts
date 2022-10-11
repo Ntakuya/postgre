@@ -22,6 +22,8 @@ dependencies {
     implementation("org.postgresql:postgresql:42.2.12")
     implementation("org.jdbi:jdbi3-sqlobject:3.20.0")
     implementation("org.jdbi:jdbi3-kotlin:3.20.0")
+    implementation("io.ktor:ktor-server-core:2.1.2")
+    implementation("io.ktor:ktor-server-netty:2.1.2")
 
     testImplementation("org.jetbrains.kotlin:kotlin-test")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit")
