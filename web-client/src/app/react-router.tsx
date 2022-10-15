@@ -11,6 +11,6 @@ export const ReactRouterProvider: FC<ReactRouterProviderProps> = ({
     return (
         <BrowserRouter>
             {children}
-    </BrowserRouter>
+        </BrowserRouter>
     )
 }

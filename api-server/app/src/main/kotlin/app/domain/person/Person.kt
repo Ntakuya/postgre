@@ -1,6 +1,6 @@
 package app.domain.person
 
-import java.util.concurrent.ThreadLocalRandom;
+import kotlin.random.Random
 
 data class Person(
     val id: Int,
@@ -14,7 +14,7 @@ data class Person(
         }
 
         private fun generateUUID(): Int {
-            return ThreadLocalRandom.current().nextInt(1, 2147483647 + 1)
+            return Random.nextInt(0, 100)
         }
     }
 }

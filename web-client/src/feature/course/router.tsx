@@ -1,14 +1,14 @@
 import { FC } from "react";
 import { Route, Routes } from "react-router-dom";
-import { useCourses } from "../../data-access/useCourses";
-import { useHealth } from "../../data-access/useHealth";
+import CourseListPage from "./pages/course-list-page";
 
 export const CourseRooutes: FC = () => {
-    const { data, error } = useCourses()
-    const result = useHealth()
-    console.log(error)
-    console.log(result)
     return (
-        <div>sample</div>
+        <Routes>
+            <Route index element={<CourseListPage />} />
+            <Route path="*" element={<div>sample</div>} />
+        </Routes>
     )
 }
+
+export default CourseRooutes

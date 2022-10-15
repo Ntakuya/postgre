@@ -2,7 +2,6 @@ package app.infrastructure.course
 
 import app.domain.course.Course
 import org.jdbi.v3.core.Handle
-import kotlinx.datetime.LocalDate
 
 object CourseRepository {
     fun getAllCourses(handle: Handle): List<Course> {
