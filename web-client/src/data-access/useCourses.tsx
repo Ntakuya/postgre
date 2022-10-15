@@ -1,13 +1,9 @@
 import { useQuery } from "@tanstack/react-query";
-import { Course } from "../domain";
+import { getCoursesRequest } from "../api/course-request";
+import { Course } from "../models";
 
-const getCourses = async(): Promise<Course[]> => {
-    const res = await fetch("http://localhost:8080/courses")
-    return res.json()
-}
 
 export function useCourses() {
-    const result = useQuery<Course[]>(["courses"], getCourses)
-
+    const result = useQuery<Course[]>(["courses"], getCoursesRequest)
     return result
 }

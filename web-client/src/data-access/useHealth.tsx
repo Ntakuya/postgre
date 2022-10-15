@@ -1,16 +1,7 @@
-import { useQueries, useQuery } from "@tanstack/react-query"
-
-export const getHealth = async () => { 
-    const res = await fetch("http://localhost:8080/health", {
-        headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json'
-        },
-    })
-    return res.json()
-}
+import { useQuery } from "@tanstack/react-query"
+import { getHealthRequest } from "../api/health-request"
 
 export function useHealth() {
-    const result = useQuery(["halth"], getHealth)
+    const result = useQuery(["halth"], getHealthRequest)
     return result
 }
